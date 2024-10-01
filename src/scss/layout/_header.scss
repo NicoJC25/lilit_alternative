@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* Header for index */
+
+.header {
+    background-color: v.$cyan;
+    display: flex;
+    align-items: center;
+
+    picture {
+        margin: 1rem 0 0 4rem;
+
+        img{
+            height: 10rem;
+        }
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        margin-left: 2.5rem;
+        background-color: v.$blue;
+        height: 5rem;
+        width: 70%;
+        padding: 2rem 6rem 2rem 5rem;
+        border-radius: 1.7rem;
+        box-shadow: 9px 9px 5px 1px rgba(48,48,48,0.75);
+        -webkit-box-shadow: 9px 9px 5px 1px rgba(48,48,48,0.75);
+        -moz-box-shadow: 9px 9px 5px 1px rgba(48,48,48,0.75);
+
+        li {
+            @include m.list-reset;
+
+            a {
+                margin-right: 2rem;
+                font-size: 2.3rem;
+                font-weight: v.$light_font;
+                color: v.$black;
+
+                &:hover {
+                    color: v.$red;
+                }
+                
+                &.active {
+                    color: v.$red;
+                }
+            }
+        }
+    }
+}
+

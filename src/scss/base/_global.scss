@@ -14,7 +14,69 @@ html {
     box-sizing: inherit;
 }
 
+@font-face {
+    font-family: 'Hijrnotes'; 
+    src: url('../../../src/fonts/Hijrnotes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Quicksand'; /* Normal */
+    src: url('../../../src/fonts/Quicksand_Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Quicksand'; /* Bold */
+    src: url('../../../src/fonts/Quicksand_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Quicksand'; /* Italic */
+    src: url('../../../src/fonts/Quicksand_Book_Oblique.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'Quicksand'; /* Italic and Bold */
+    src: url('../../../src/fonts/Quicksand_Bold_Oblique.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Quicksand'; /* Lighter */
+    src: url('../../../src/fonts/Quicksand_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand'; /* Italic and Lighter */
+    src: url('../../../src/fonts/Quicksand_Light_Oblique.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
 /* body */
+
+.body-index{
+    font-family: v.$main_font;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2rem;
+    background-image: url(../../../src/img/fondo_alt.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow-x: hidden;
+    
+}
 
 /* others */
 
@@ -32,7 +94,7 @@ a {
 }
 h1, h2, h3 {
     margin: 0 0 5rem 0;
-    font-weight: 900;
+    font-weight: 600;
 }
 h1 {
     font-size: 4rem;
@@ -41,7 +103,7 @@ h2 {
     font-size: 7.6rem;
 }
 h3 {
-    font-size: 8rem;
+    font-size: 3rem;
     text-align: center;
 }
 
