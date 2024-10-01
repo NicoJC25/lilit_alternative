@@ -1,0 +1,50 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+/* Global settings */
+
+/* rem configuration */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* body */
+
+/* others */
+
+p {
+    color: v.$white;
+    line-height: 1.5;
+}
+.container {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    margin: 0 0 5rem 0;
+    font-weight: 900;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 7.6rem;
+}
+h3 {
+    font-size: 8rem;
+    text-align: center;
+}
+
+body > section {
+    padding: 10rem 0
+}
