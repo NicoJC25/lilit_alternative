@@ -34,7 +34,7 @@
 
             a {
                 margin-right: 2rem;
-                font-size: 2.3rem;
+                font-size: 2.2rem;
                 font-weight: v.$light_font;
                 color: v.$black;
 
@@ -44,6 +44,72 @@
                 
                 &.active {
                     color: v.$red;
+                }
+            }
+        }
+
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                margin-right: 2rem;
+                font-size: 2rem;
+                font-weight: v.$light_font;
+                color: v.$black;
+    
+                &:hover {
+                    color: v.$red;
+                }
+                
+                &.active {
+                    color: v.$red;
+                }
+            }
+
+            &:hover .dropdown-menu {    
+                display: block;
+            }
+            .dropdown-menu {
+                width: 30rem;
+                margin-top: .1rem;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: v.$blue;
+                padding: 1rem;
+        
+                li {
+                    margin: 0;
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+        
+                    @include m.desktop {
+                        padding: 0rem 0;
+                    }
+        
+                    a {
+                        display: flex;
+                        align-items: center;
+                        font-size: 2rem;
+                        color: v.$black;
+                        text-decoration: none;
+                        width: 50rem;
+        
+                        &.more_height {
+                            height: 7rem;
+                        }
+        
+                        &:hover {
+                            color: v.$red;
+                        }
+                    }
                 }
             }
         }

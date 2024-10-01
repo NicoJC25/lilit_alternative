@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.quienes_somos {
+    background-color: v.$cyan;
+    margin: 3rem 0 5rem 10rem;
+    width: 70%;
+    border-radius: 5rem;
+    padding: 2rem;
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin: 2rem 0 0 0;
+    }
+}
+
+.mision {
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-left: 10rem;
+    }
+
+    .mision-description {
+        margin: 0 0 0 10rem;
+        background-color: v.$cyan;
+        width: 70%;
+        border-radius: 5rem;
+        padding: 2rem;
+
+        h2 {
+            margin: 0;
+        }
+    
+        p {
+            font-size: 1.5rem;
+            margin: 2rem 0 0 0;
+        }
+    }
+}
+
+.valores {
+    background-color: v.$cyan;
+    margin: 5rem 0 5rem 25rem;
+    width: 70%;
+    border-radius: 5rem;
+    padding: 2rem;
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin: 2rem 0 0 0;
+    }
+}

@@ -73,15 +73,28 @@ html {
     background-image: url(../../../src/img/fondo_alt.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top center; /* Ajuste tentativamente cambiable */
     position: relative;
     overflow-x: hidden;
     
 }
 
+.body-us{
+    font-family: v.$main_font;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2rem;
+    background-image: url(../../../src/img/fondo_alt_2.png);
+    background-size: cover;
+    max-width: 192rem;
+    background-repeat: no-repeat;
+    background-position: top center; /* Ajuste tentativamente cambiable */
+}
+
 /* others */
 
 p {
-    color: v.$white;
+    color: v.$black;
     line-height: 1.5;
 }
 .container {
