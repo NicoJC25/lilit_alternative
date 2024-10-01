@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 h3{
-    margin: 6rem 20rem 1rem 0;
+    margin: 6rem 30rem 1rem 0;
     // font-family: v.$cursive_font;
     font-weight: v.$normal_font;
     font-style: v.$italic_font;
@@ -17,7 +17,7 @@ h3{
 
     h4 {
         font-size: 3rem;
-        margin-right: 20rem;
+        margin-right: 30rem;
     }
 
 }
@@ -54,9 +54,9 @@ h3{
 
 .foto_mujer {
     position: absolute;
-    width: 65rem;
+    width: 63rem;
     height: 85rem;
     z-index: 1;
-    right: -8rem;
+    right: -2rem;
     bottom: -12rem;
 }
