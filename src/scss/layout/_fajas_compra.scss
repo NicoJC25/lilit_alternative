@@ -1,0 +1,178 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.titulo-faja {
+    margin: 30rem 0 0 0;
+    font-size: 4rem;
+    text-align: center
+}
+
+.faja-muestra {
+    margin-top: 2rem;
+    @include m.grid(3);
+    gap: 0rem;
+
+    .descripcion-faja {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30rem;
+        align-items: center;
+
+        p {
+            width: 20rem;
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .color-faja {
+            display: flex;
+            margin-top: 5rem;
+            gap: 1rem;
+            
+            p {
+                width: min-content;
+                margin: 0 1rem 0 0;
+            }
+
+            .color-1,
+            .color-2,
+            .color-3 {
+                width: 3rem;
+                height: 3rem;
+                border-radius: 2rem;
+            }
+
+            .color-1 {
+                background-color: v.$black;
+            }
+
+            .color-2 {
+                background-color: v.$white;
+                border: .1rem v.$black solid;
+            }
+
+            .color-3 {
+                background-color: v.$light_brown;
+            }
+        }
+    }
+
+    .informacion-faja {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .imagen-faja {
+            width: 40rem;
+            height: 60rem;
+            background-color: v.$blue;
+            border-radius: 2rem;
+        }
+
+        .caracteristicas-faja {
+
+            h3 {
+                margin: 2rem 0 0 5rem;
+                font-size: 2rem;
+                font-style: v.$normal_font;
+                text-align: start;
+            }
+
+            p {
+                margin: 2rem 40rem 0 0;
+                width: 100%;
+                line-height: 1;
+                font-size: 1.5rem;
+
+                span {
+                    font-weight: v.$bold_font;
+                }
+            }
+        }
+    }
+
+    .eleccion-faja {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 3rem;
+        
+
+        .info-rapida {
+            font-size: 1.5rem;
+            width: 25rem;
+            margin: 0;
+            line-height: 1;
+            font-weight: v.$bold_font;
+        }
+
+        .tamano-faja {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 1.5rem;
+                width: 100%;
+            }
+
+            .tallas {
+                margin-left: 3rem;
+                margin-right: .5rem;
+            }
+
+            .talla {
+                margin: 0 0 0 .5rem;
+                border: .1rem solid v.$blue;
+                padding: 1rem 1rem 1rem 1rem;
+            }
+        }
+
+        .precio-faja {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin: 0;
+                color: v.$bold_blue;
+                font-weight: v.$bold_font;
+                font-size: 2.5rem;
+            }
+
+            .comprar-faja {
+                margin-top: 1rem;
+                color: v.$white;
+                font-size: 2rem;
+                background-color: v.$bold_blue;
+                padding: .5rem 8rem .5rem 8rem;
+            }
+        }
+
+        .imagen-secundaria-faja {
+            margin: 2rem;
+            width: 35rem;
+            height: 39rem;
+            background-color: v.$blue;
+            border-radius: 4rem;
+        }
+
+        .beneficios-faja {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                font-style: v.$normal_font;
+                font-size: 2.5rem;
+                font-weight: v.$bold_font;
+                margin: 0;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
