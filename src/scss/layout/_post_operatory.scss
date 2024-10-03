@@ -2,7 +2,12 @@
 @use 'base/mixins' as m;
 
 .main-post-o {
-    @include m.grid(2);
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+        @include m.grid(2);
+    }
 
     .primera_columna {
         display: flex;
@@ -13,7 +18,7 @@
         /* Solo para "lipopapada" */
 
         .post-operatorio {
-            margin: 1rem 0 0 10rem;
+            margin: 5rem 1rem 0 1rem;
             background-color: v.$cyan;
             padding: 2rem;
             border: .5rem solid v.$gray;
@@ -21,6 +26,10 @@
             box-shadow: 1px 3px 17px 0px rgba(0,0,0,0.75);
             -webkit-box-shadow: 1px 3px 17px 0px rgba(0,0,0,0.75);
             -moz-box-shadow: 1px 3px 17px 0px rgba(0,0,0,0.75);
+
+            @include m.tablet {
+                margin: 1rem 0 0 10rem;
+            }
 
             h2 {
                 margin: 0;
@@ -37,8 +46,12 @@
         
         .info-post-o {
             width: 100%;
-            margin: 5rem 0 0 30rem;
+            margin: 5rem 1rem 0 1rem;
             text-align: justify;
+
+            @include m.tablet {
+                margin: 5rem 0 0 30rem;
+            }
 
             h2 {
                 text-align: center;
@@ -53,8 +66,12 @@
 
         .procedimiento {
             width: 100%;
-            margin: 5rem 0 0 30rem;
+            margin: 5rem 1rem 0 1rem;
             text-align: justify;
+
+            @include m.tablet {
+                margin: 5rem 0 0 30rem;
+            }
 
             h2 {
                 text-align: center;
@@ -69,22 +86,30 @@
 
 
         .linea {
-            margin: 1rem 0 0 30rem;
+            margin: 1rem 0 0 0;
             width: 100%;
             height: 0.5rem;
             background-color: v.$blue;
+
+            @include m.tablet {
+                margin: 1rem 0 0 30rem;
+            }
         }
 
         /* Configuracion redes sociales */
 
         .redes_sociales {
             left: 0;
-            margin-top: 20rem;
+
+            @include m.tablet {
+                margin-top: 20rem;
+            }
         }
 
         /* Configuracion para las interfaces que tienen el antes y despues a la izquierda */
 
         .antes {
+            margin-top: 5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -95,10 +120,15 @@
             }
 
             .imagen-antes {
-                width: 40rem;
-                height: 45rem;
+                width: 20rem;
+                height: 25rem;
                 background-color: v.$blue;
                 border-radius: 8rem;
+
+                @include m.tablet {
+                    width: 40rem;
+                    height: 45rem;
+                }
             }
         }
 
@@ -113,10 +143,15 @@
             }
 
             .imagen-despues {
-                width: 40rem;
-                height: 45rem;
+                width: 20rem;
+                height: 25rem;
                 background-color: v.$blue;
                 border-radius: 8rem;
+
+                @include m.tablet {
+                    width: 40rem;
+                    height: 45rem;
+                }
             }
         }
 
@@ -141,15 +176,25 @@
             }
 
             .imagen-antes {
-                width: 40rem;
-                height: 45rem;
+                width: 20rem;
+                height: 25rem;
                 background-color: v.$blue;
                 border-radius: 8rem;
+
+                @include m.tablet {
+                    width: 40rem;
+                    height: 45rem;
+                }
             }
         }
 
         .abajo {
-            margin-top: 20rem;
+            margin-top: 5rem;
+            
+
+            @include m.tablet {
+                margin-top: 20rem;
+            }
         }
 
         .despues {
@@ -163,10 +208,17 @@
             }
 
             .imagen-despues {
-                width: 40rem;
-                height: 45rem;
+                width: 20rem;
+                height: 25rem;
                 background-color: v.$blue;
                 border-radius: 8rem;
+                margin-bottom: 5rem;
+
+                @include m.tablet {
+                    width: 40rem;
+                    height: 45rem;
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -174,8 +226,12 @@
 
         .info-post-o {
             width: 100%;
-            margin: 5rem 30rem 0 0;
+            margin: 5rem 1rem 0 1rem;
             text-align: justify;
+
+            @include m.tablet {
+                margin: 5rem 30rem 0 0;
+            }
 
             h2 {
                 text-align: center;
@@ -190,8 +246,12 @@
 
         .procedimiento {
             width: 100%;
-            margin: 5rem 30rem 0 0;
+            margin: 5rem 1rem 0 1rem;
             text-align: justify;
+
+            @include m.tablet {
+                margin: 5rem 30rem 0 0;
+            }
 
             h2 {
                 text-align: center;
@@ -210,6 +270,10 @@
             width: 100%;
             height: 0.5rem;
             background-color: v.$blue;
+
+            @include m.tablet {
+                margin: 1rem 30rem 0 0;
+            }
         }
     }
 }
