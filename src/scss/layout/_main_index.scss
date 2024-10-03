@@ -2,10 +2,13 @@
 @use 'base/mixins' as m;
 
 h3{
-    margin: 6rem 30rem 1rem 0;
-    // font-family: v.$cursive_font;
+    margin: 6rem 0 0 0;
     font-weight: v.$normal_font;
     font-style: v.$italic_font;
+
+    @include m.tablet {
+        margin: 6rem 30rem 1rem 0;
+    }
 }
 
 .carrusel_imagenes {
@@ -17,46 +20,74 @@ h3{
 
     h4 {
         font-size: 3rem;
-        margin-right: 30rem;
+        margin: 0;
+        text-align: center;
+
+        @include m.tablet{
+            margin-right: 30rem;
+            text-align: start;
+        }
     }
 
 }
 
 .informacion_adicional {
-    margin: 5rem 10rem 12rem 0;
+    margin: 5rem 0 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    @include m.tablet {
+        margin: 5rem 10rem 12rem 0;
+    }
+
     h1{
         text-transform: uppercase;
-        margin: 0 10rem 0 0;
+        margin: 0;
         font-size: 3rem;
+
+        @include m.tablet {
+            margin: 0 10rem 0 0;
+        }
     }
 
     .linea {
         margin-top: 1rem;
-        width: 60rem;
+        width: 100%;
         height: 0.5rem;
         background-color: v.$blue;
+
+        @include m.tablet {
+            width: 60rem;
+        }
     }
 
     h2 {
         font-size: 3rem;
-        margin: 1rem 10rem 0 0;
+        margin: 1rem 0 0 0;
         font-weight: v.$normal_font;
+
         span {
             font-weight: v.$light_font;
             font-style: v.$italic_font;
+        }
+
+        @include m.tablet {
+            margin: 1rem 10rem 0 0;
         }
     }
 }
 
 .foto_mujer {
-    position: absolute;
-    width: 63rem;
-    height: 85rem;
-    z-index: 1;
-    right: -2rem;
-    bottom: -12rem;
+    display: none;
+
+    @include m.tablet {
+        display: block;
+        position: absolute;
+        width: 63rem;
+        height: 85rem;
+        z-index: 1;
+        right: -2rem;
+        bottom: -12rem;
+    }
 }
