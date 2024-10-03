@@ -70,7 +70,15 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        position: absolute;
+        position: fixed;
+        top: 50%;
+        left: 0;
+
+        @include m.tablet{
+            position: absolute;
+            top: auto;
+            transform: none;
+        }
 
         .whatsapp,
         .facebook,
@@ -107,23 +115,33 @@ body {
     }
 
     .puntos_1_au {
-        position: absolute;
-        left: 0;
-        z-index : -1;
-    
+        display: none;
+
         img {
             width: 20rem;
+        }
+
+        @include m.tablet {
+            display: block;    
+            position: absolute;
+            left: 0;
+            z-index : -1;
         }
     }
     
     .puntos_2_au {
-        position: absolute;
-        right: 3%;
-        bottom: 0;
-        z-index : -1;
+        
+        display: none;
     
         img {
             width: 15rem;
+        }
+
+        @include m.tablet {
+            position: absolute;
+            right: 3%;
+            bottom: 0;
+            z-index : -1;
         }
     }
 
@@ -132,12 +150,17 @@ body {
     }
 
     .puntos_2_faja {
-        position: absolute;
-        right: 3%;
-        z-index: -1;
+        
+        display: none;
 
         img {
             width: 15rem;
+        }
+
+        @include m.tablet {
+            position: absolute;
+            right: 3%;
+            z-index: -1;
         }
     }
 }
