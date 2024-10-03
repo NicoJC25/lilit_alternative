@@ -4,28 +4,46 @@
 .main-fajas {
 
     .redes_sociales {
-        margin-top: 5rem;
         position: fixed;
+
+        @include m.tablet {
+            margin-top: 5rem;
+        }
     }
 
     .linea {
-        margin: 10rem 0 0 15rem;
+        margin: 10rem 0 0 11.2rem;
         width: 43%;
         height: 0.5rem;
         background-color: v.$blue;
+
+        @include m.tablet {
+            margin: 10rem 0 0 15rem;
+        }
     }
 
     .fajas-d-i {
         display: flex;
+        flex-direction: column;
         gap: 5rem;
         align-items: center;
+
+        @include m.tablet {
+            flex-direction: row;
+        }
         
         .fajas-d {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 60rem;
-            margin-left: 15rem;
+            width: 100%;
+            padding: 0 2rem 0 2rem;
+
+            @include m.tablet {
+                width: 60rem;
+                margin-left: 15rem;
+                padding: 0;
+            }
             
             h1 {
                 margin: 0;
@@ -43,25 +61,43 @@
 
         .fajas-i {
             border-radius: 5rem;
-            width: 40rem;
-            height: 40rem;
+            width: 25rem;
+            height: 25rem;
             background-color: v.$blue;
+
+            @include m.tablet {
+                width: 40rem;
+                height: 40rem;
+            }
         }
     }
 
     .fajas-many_images {
         display: flex;
-        justify-content: flex-end;
         gap: 5rem;
-        margin: 5rem 15rem 0 0;
+        margin: 5rem 0 0 0;
+        padding: 0 1rem 0 1rem;
+        justify-content: center;
+
+        @include m.tablet {
+            justify-content: flex-end;
+            margin: 5rem 15rem 0 0;
+            padding: 0;
+        }
 
         .img-f-1,
         .img-f-2,
         .img-f-3 {
-            width: 25rem;
-            height: 20rem;
+            width: 15rem;
+            height: 10rem;
             background-color: v.$blue;
             border-radius: 2rem;
+
+            @include m.tablet {
+                width: 25rem;
+                height: 20rem;
+                padding: 0;
+            }
         }
     }
 }
