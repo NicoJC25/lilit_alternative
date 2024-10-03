@@ -60,7 +60,11 @@
         padding: 2rem;
 
         @include m.tablet {
-            margin: 0 0 0 10rem;
+            margin: 0 2rem 0 10rem;
+
+        }
+
+        @include m.desktop {
 
         }
 
@@ -84,6 +88,10 @@
     padding: 2rem;
 
     @include m.tablet {
+        margin: 5rem 0 5rem 10rem;
+    }
+
+    @include m.desktop {
         margin: 5rem 0 5rem 25rem;
     }
 
