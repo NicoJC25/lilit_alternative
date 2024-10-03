@@ -55,8 +55,12 @@
 
             @include m.desktop {
                 width: 60rem;
-                margin-left: 15rem;
+                margin-left: 10rem;
                 padding: 0;
+            }
+
+            @include m.desktopXL {
+                margin-left: 15rem;
             }
             
             h1 {
@@ -93,10 +97,6 @@
         padding: 0 1rem 0 1rem;
         justify-content: center;
         width: 95%;
-
-        @include m.semi_desktop {
-
-        }
 
         @include m.desktop {
             justify-content: flex-end;
