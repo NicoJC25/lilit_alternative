@@ -65,6 +65,14 @@
                 font-weight: v.$light_font;
                 color: v.$black;
 
+                @include m.desktop {
+                    font-size: 1.9rem;
+                }
+
+                @include m.desktopXL {
+                    font-size: 2.2rem;
+                }
+
                 &:hover {
                     color: v.$red;
                 }
@@ -127,6 +135,14 @@
                         color: v.$black;
                         text-decoration: none;
                         width: 50rem;
+
+                        @include m.desktop {
+                            font-size: 1.9rem;
+                        }
+        
+                        @include m.desktopXL {
+                            font-size: 2rem;
+                        }
         
                         &.more_height {
                             height: 7rem;
