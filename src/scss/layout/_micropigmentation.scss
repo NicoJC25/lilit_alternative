@@ -2,101 +2,137 @@
 @use 'base/mixins' as m;
 
 .main-micropigmentation {
-    @include m.grid(2);
+    display: flex;
+    flex-direction: column;
 
-    .primera-columna {
-        margin-left: 10rem;
+    @include m.tablet {
+        
+    }
+
+    /* Configuracion para las lineas */
+
+    .linea {
+        margin: 7rem 0 0 11rem;
+        width: 50%;
+        height: 0.5rem;
+        background-color: v.$blue;
+
+        @include m.tablet {
+            margin: 7rem 0 0 15rem;
+        }
+    }
+
+    .derecha { /* Propiedad para la linea al lado derecho */
+        margin-left: 11rem;
+
+        @include m.tablet {
+            margin-left: 55rem;
+        }
+    }
+
+    /* Configuracion para los textos */
+
+    .micropigmentacion_d,
+    .parpados_d,
+    .cejas_d {
+
+        width: 80%;
+        margin-left: 6rem;
+        text-align: center;
+
+        @include m.tablet {
+            margin-left: 5rem;
+            width: 50%;
+            text-align: left;
+        }
+
+        h3 {
+            margin: 1rem 0 0 0;
+            font-weight: v.$bold_font;
+            font-size: 3rem;
+
+            @include m.tablet {
+                font-size: 4rem;
+
+                &::after {
+                    content: "\A"; /* \A es un salto de línea */
+                    white-space: pre; /* Asegura que el salto de línea se respete */
+                }
+            }
+        }
+
+        p {
+            margin: 2rem 0 0 0;
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Configuracion para las imagenes */
+
+    .micropigmentacion_i,
+    .cejas_i,
+    .parpados_i {
+        margin-top: 2rem;
+        margin-left: 6rem;
+        width: 20rem;
+        height: 20rem;
+        background-color: v.$blue;
+        border-radius: 20rem;
+
+        @include m.tablet {
+            margin-left: 0;
+            margin-top: 0;
+            width: 40rem;
+            height: 40rem;
+        }
+    }
+
+    /* Configuracion de cada fila */
+
+    .primera-fila {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .micropigmentacion_d,
-        .parpados_d {
-            margin-left: 5rem;
-
-            h3 {
-                margin: 1rem 0 0 0;
-                font-weight: v.$bold_font;
-                font-size: 4rem;
-            }
-
-            p {
-                margin: 2rem 0 0 0;
-                font-size: 1.5rem;
-            }
+        @include m.tablet {
+            flex-direction: row;
+            margin-left: 10rem;
         }
+
         .micropigmentacion_d {
             margin-top: 1rem;
         }
 
-        .cejas_i {
-            margin-top: 10rem;
-            width: 40rem;
-            height: 40rem;
-            background-color: v.$blue;
-            border-radius: 20rem;
-        }
-
-        .linea {
-            margin: 7rem 0 0 0;
-            width: 100%;
-            height: 0.5rem;
-            background-color: v.$blue;
-        }
-
-        .no_espacio {
-            margin-top: 2rem;
-        }
-
-        .espacio_medio {
-            margin-top: 6rem;
-        }
-
         .redes_sociales {
-            left: 0;
-            margin-top: 15rem;
+            @include m.tablet {
+                margin-top: 15rem;
+            }
         }
     }
 
-    .segunda-columna {
-        margin-right: 10rem;
+    .segunda-fila {
+        margin-top: 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .cejas_d {
-            margin-right: 5rem;
-
-            h3 {
-                margin: 1rem 0 0 0;
-                font-weight: v.$bold_font;
-                font-size: 4rem;
-            }
-
-            p {
-                margin: 2rem 0 0 0;
-                font-size: 1.5rem;
-            }
+        @include m.tablet {
+            margin-top: 0;
+            flex-direction: row;
+            justify-content: center;
         }
+    }
 
-        .parpados_i,
-        .micropigmentacion_i {
-            margin-top: 3rem;
-            width: 40rem;
-            height: 40rem;
-            background-color: v.$blue;
-            border-radius: 20rem;
-        }
+    .tercera-fila {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .linea {
-            margin: 5rem 0 0 0;
-            width: 100%;
-            height: 0.5rem;
-            background-color: v.$blue;
-        }
-
-        .no_espacio {
-            margin-top: 2rem;
+        @include m.tablet {
+            margin-top: 0;
+            flex-direction: row;
+            justify-content: center;
         }
     }
 }
@@ -104,7 +140,12 @@
 .parrafo-suelto {  
     p {
         font-size: 1.5rem;
-        text-align: right;
-        margin: 3rem 25rem 5rem 0;
+        text-align: center;
+        margin: 3rem 1rem 5rem 7rem;
+
+        @include m.tablet {
+            text-align: right;
+            margin: 3rem 25rem 5rem 0;
+        }
     }
 }

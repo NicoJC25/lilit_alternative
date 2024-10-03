@@ -138,6 +138,7 @@ body {
         }
 
         @include m.tablet {
+            display: block;
             position: absolute;
             right: 3%;
             bottom: 0;
@@ -158,6 +159,7 @@ body {
         }
 
         @include m.tablet {
+            display: block;
             position: absolute;
             right: 3%;
             z-index: -1;
