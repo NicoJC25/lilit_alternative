@@ -19,6 +19,13 @@
         @content;
     }    
 }
+
+@mixin semi_desktop {
+    @media (min-width: v.$semi_desktop) {
+        @content;
+    }    
+}
+
 @mixin desktopXL {
     @media (min-width: v.$desktopXL) {
         @content;
