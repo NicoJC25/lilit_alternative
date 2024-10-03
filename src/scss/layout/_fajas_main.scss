@@ -48,7 +48,12 @@
             text-align: center;
 
             @include m.semi_desktop {
+                width: 50rem;
                 text-align: left;
+                margin-left: 2rem;
+            }
+
+            @include m.desktop {
                 width: 60rem;
                 margin-left: 15rem;
                 padding: 0;
@@ -90,6 +95,10 @@
         width: 95%;
 
         @include m.semi_desktop {
+
+        }
+
+        @include m.desktop {
             justify-content: flex-end;
             margin: 5rem 15rem 0 0;
             padding: 0;

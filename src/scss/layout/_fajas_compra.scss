@@ -6,7 +6,7 @@
     font-size: 4rem;
     text-align: center;
 
-    @include m.semi_desktop {
+    @include m.desktop {
         margin: 30rem 0 0 0;
     }
 }
@@ -17,7 +17,7 @@
     margin-top: 5rem;
     gap: 0rem;
 
-    @include m.semi_desktop {
+    @include m.desktop {
         @include m.grid(3);
         margin-top: 2rem;
     }
@@ -29,7 +29,7 @@
         margin-bottom: 5rem;
         align-items: center;
 
-        @include m.semi_desktop {
+        @include m.desktop {
             margin-bottom: 30rem;
         }
 
@@ -39,7 +39,7 @@
             font-size: 1.5rem;
             line-height: 1.5;
 
-            @include m.semi_desktop {
+            @include m.desktop {
                 width: 20rem;
             }
         }
@@ -88,7 +88,7 @@
             background-color: v.$blue;
             border-radius: 2rem;
 
-            @include m.semi_desktop {
+            @include m.desktop {
                 width: 40rem;
                 height: 60rem;
             }
@@ -102,7 +102,7 @@
                 font-style: v.$normal_font;
                 text-align: start;
 
-                @include m.semi_desktop{
+                @include m.desktop{
                     margin: 2rem 0 0 5rem;
                 }
             }
@@ -113,7 +113,7 @@
                 line-height: 1;
                 font-size: 1.5rem;
 
-                @include m.semi_desktop {
+                @include m.desktop {
                     margin: 2rem 40rem 0 0;
                 }
 
@@ -130,7 +130,7 @@
         align-items: center;
         margin-top: 4rem;
 
-        @include m.semi_desktop {
+        @include m.desktop {
             margin-right: 3rem;
             margin-top: 0;
         }
@@ -145,7 +145,7 @@
             padding: 0 1rem 0 1rem;
             text-align: center;
 
-            @include m.semi_desktop {
+            @include m.desktop {
                 width: 25rem;
                 padding: 0;
                 text-align: left;
@@ -157,7 +157,7 @@
             align-items: center;
             margin-top: 2rem;
 
-            @include m.semi_desktop{
+            @include m.desktop{
                 margin-top: 0;
             }
 
@@ -229,7 +229,7 @@
                     width: 80%;
                 }
 
-                @include m.semi_desktop {
+                @include m.desktop {
                     padding: 0;
                 }
             }
