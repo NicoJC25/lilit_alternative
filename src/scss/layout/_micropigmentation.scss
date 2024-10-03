@@ -17,7 +17,7 @@
         height: 0.5rem;
         background-color: v.$blue;
 
-        @include m.tablet {
+        @include m.desktop {
             margin: 7rem 0 0 15rem;
         }
     }
@@ -26,6 +26,10 @@
         margin-left: 11rem;
 
         @include m.tablet {
+            margin-left: 50rem;
+        }
+
+        @include m.desktop {
             margin-left: 55rem;
         }
     }
@@ -143,7 +147,7 @@
         text-align: center;
         margin: 3rem 1rem 5rem 7rem;
 
-        @include m.tablet {
+        @include m.desktop {
             text-align: right;
             margin: 3rem 25rem 5rem 0;
         }
