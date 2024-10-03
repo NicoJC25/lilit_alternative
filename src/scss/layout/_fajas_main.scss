@@ -2,6 +2,13 @@
 @use 'base/mixins' as m;
 
 .main-fajas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tablet {
+        display: block;
+    }
 
     .redes_sociales {
         position: fixed;
@@ -12,13 +19,13 @@
     }
 
     .linea {
-        margin: 10rem 0 0 11.2rem;
+        margin: 10rem 0 0 0;
         width: 43%;
         height: 0.5rem;
         background-color: v.$blue;
 
         @include m.tablet {
-            margin: 10rem 0 0 15rem;
+            margin: 10rem 0 0 15rem ;
         }
     }
 
