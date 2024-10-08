@@ -63,6 +63,7 @@
                 width: 3rem;
                 height: 3rem;
                 border-radius: 2rem;
+                cursor: pointer;
 
                 &[data-color="negro"] {
                     background-color: v.$black;
@@ -90,6 +91,9 @@
             height: 40rem;
             background-color: v.$blue;
             border-radius: 2rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
 
             @include m.desktop {
                 width: 40rem;
@@ -179,6 +183,7 @@
                 border: .1rem solid v.$blue;
                 padding: 1rem 1rem 1rem 1rem;
                 text-align: center;
+                cursor: pointer;
             }
         }
 
@@ -215,6 +220,9 @@
             height: 39rem;
             background-color: v.$blue;
             border-radius: 4rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
 
         .beneficios-faja {

@@ -83,54 +83,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /*----------------------- Funcion para cambio de imagen con tamaño y color en fajas ------------------------*/
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const colorElements = document.querySelectorAll('.color');
-//     const tallaElements = document.querySelectorAll('.talla');
-//     const fajaImage = document.getElementById('faja-image');
+document.addEventListener('DOMContentLoaded', function () {
+    const colorElements = document.querySelectorAll('.color');
+    const tallaElements = document.querySelectorAll('.talla');
+    const fajaImageBox = document.querySelector('.imagen-faja'); // Selecciona la caja principal
+    const fajaImageSecundariaBox = document.querySelector('.imagen-secundaria-faja'); // Selecciona la caja secundaria
 
-//     let selectedColor = 'negro'; // Color por defecto
-//     let selectedTalla = 'S'; // Talla por defecto
+    let selectedColor = 'negro'; // Color por defecto
+    let selectedTalla = 'S'; // Talla por defecto
 
-//     // Función para actualizar la imagen
-//     function updateImage() {
-//         const imageUrl = `../src/img/faja_${selectedColor}_${selectedTalla}.png`; // Asegúrate de tener imágenes nombradas adecuadamente
-//         fajaImage.setAttribute('src', imageUrl);
-//     }
+    // Función para actualizar las imágenes como background-image
+    function updateImage() {
+        // Imagen principal
+        const imageUrlPrincipal = `../../../src/img/faja_${selectedColor}_${selectedTalla}.png`;
+        fajaImageBox.style.backgroundImage = `url(${imageUrlPrincipal})`; // Cambia el fondo de la caja principal
 
-//     // Detectar selección de color
-//     colorElements.forEach(color => {
-//         color.addEventListener('click', function () {
-//             selectedColor = this.getAttribute('data-color'); // Obtener el color seleccionado
-//             updateImage(); // Actualizar la imagen
-//         });
-//     });
+        // Imagen secundaria
+        const imageUrlSecundaria = `../../../src/img/faja_secundaria_${selectedColor}_${selectedTalla}.png`; // Sufijo "secundaria"
+        fajaImageSecundariaBox.style.backgroundImage = `url(${imageUrlSecundaria})`; // Cambia el fondo de la caja secundaria
+    }
 
-//     // Detectar selección de talla
-//     tallaElements.forEach(talla => {
-//         talla.addEventListener('click', function () {
-//             selectedTalla = this.getAttribute('data-talla'); // Obtener la talla seleccionada
-//             updateImage(); // Actualizar la imagen
-//         });
-//     });
-// });
+    // Llamar a updateImage() inmediatamente para mostrar una imagen por defecto al cargar la página
+    updateImage(); // Imagen por defecto al cargar la página
 
+    // Detectar selección de color
+    colorElements.forEach(color => {
+        color.addEventListener('click', function () {
+            colorElements.forEach(el => el.classList.remove('selected')); // Remueve la selección previa
+            this.classList.add('selected'); // Marca como seleccionado
+            selectedColor = this.getAttribute('data-color'); // Obtener el color seleccionado
+            updateImage(); // Actualizar las imágenes
+        });
+    });
 
-/*------------------------ Funcion para cambiar borde seleccion talla o color ----------------------------*/
-
-// colorElements.forEach(color => {
-//     color.addEventListener('click', function () {
-//         colorElements.forEach(el => el.classList.remove('selected')); // Quitar clase de todos
-//         this.classList.add('selected'); // Añadir clase al seleccionado
-//         selectedColor = this.getAttribute('data-color');
-//         updateImage();
-//     });
-// });
-
-// tallaElements.forEach(talla => {
-//     talla.addEventListener('click', function () {
-//         tallaElements.forEach(el => el.classList.remove('selected')); // Quitar clase de todos
-//         this.classList.add('selected'); // Añadir clase al seleccionado
-//         selectedTalla = this.getAttribute('data-talla');
-//         updateImage();
-//     });
-// });
+    // Detectar selección de talla
+    tallaElements.forEach(talla => {
+        talla.addEventListener('click', function () {
+            tallaElements.forEach(el => el.classList.remove('selected')); // Remueve la selección previa
+            this.classList.add('selected'); // Marca como seleccionado
+            selectedTalla = this.getAttribute('data-talla'); // Obtener la talla seleccionada
+            updateImage(); // Actualizar las imágenes
+        });
+    });
+});
