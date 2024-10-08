@@ -1,6 +1,8 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+/* Cuerpo - esqueleto de la pestaña */
+
 .main-us {
     display: flex;
     flex-direction: column;
@@ -10,6 +12,8 @@
         display: block;
     }
 }
+
+/* Parte de "quienes somos" */
 
 .quienes_somos {
     background-color: v.$cyan;
@@ -33,6 +37,8 @@
         margin: 2rem 0 0 0;
     }
 }
+
+/* Parte de "mision" */
 
 .mision {
     display: flex;
@@ -79,6 +85,8 @@
         }
     }
 }
+
+/* Parte de "valores" */
 
 .valores {
     background-color: v.$cyan;

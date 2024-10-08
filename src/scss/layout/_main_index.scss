@@ -1,15 +1,22 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+
+/* Titulo al inicio de la pagina */
+
 h3{
     margin: 6rem 0 0 0;
     font-weight: v.$normal_font;
     font-style: v.$italic_font;
 
     @include m.desktop {
-        margin: 6rem 30rem 1rem 0;
+        display: flex;
+        justify-content: center;
+        margin-right: 20rem;
     }
 }
+
+/* Seccion del carrusel */
 
 .carrusel_imagenes {
     display: flex;
@@ -30,6 +37,8 @@ h3{
     }
 
 }
+
+/* Informacion de la parte baja */
 
 .informacion_adicional {
     margin: 5rem 0 5rem 0;
@@ -77,6 +86,8 @@ h3{
         }
     }
 }
+
+/* Foto sobreposicionada de la mujer */
 
 .foto_mujer {
     display: none;
