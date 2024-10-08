@@ -59,25 +59,23 @@
                 margin: 0 1rem 0 0;
             }
 
-            .color-1,
-            .color-2,
-            .color-3 {
+            .color{
                 width: 3rem;
                 height: 3rem;
                 border-radius: 2rem;
-            }
 
-            .color-1 {
-                background-color: v.$black;
-            }
+                &[data-color="negro"] {
+                    background-color: v.$black;
+                }
 
-            .color-2 {
-                background-color: v.$white;
-                border: .1rem v.$black solid;
-            }
+                &[data-color="blanco"]{
+                    background-color: v.$white;
+                    border: .1rem solid v.$black;
+                }
 
-            .color-3 {
-                background-color: v.$light_brown;
+                &[data-color="marron"]{
+                    background-color: v.$light_brown;
+                }
             }
         }
     }
@@ -183,6 +181,12 @@
                 text-align: center;
             }
         }
+
+        .color.selected,
+        .talla.selected {
+            border: 2px solid v.$red; /* Puedes cambiar el color del borde al ser seleccionado */
+        }
+
 
         .precio-faja {
             display: flex;
