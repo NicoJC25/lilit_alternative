@@ -2,12 +2,13 @@
 @use 'base/mixins' as m;
 
 .titulo-faja {
+    text-transform: uppercase;
     margin: 15rem 0 0 0;
     font-size: 4rem;
     text-align: center;
 
     @include m.desktop {
-        margin: 30rem 0 0 0;
+        margin: 3rem 0 0 0;
     }
 }
 
@@ -18,34 +19,42 @@
     gap: 0rem;
 
     @include m.desktop {
-        @include m.grid(3);
+        display: grid;
+        grid-template-columns: repeat(2, 35% 65%);
         margin-top: 2rem;
     }
 
-    .descripcion-faja {
+    .primera_columna-faja {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin-bottom: 5rem;
         align-items: center;
 
-        @include m.desktop {
-            margin-bottom: 30rem;
-        }
-
-        p {
-            width: 60%;
-            margin: 0;
-            font-size: 1.5rem;
-            line-height: 1.5;
-
+        .descripcion-faja {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 5rem;
+            align-items: center;
+    
             @include m.desktop {
-                width: 20rem;
-                margin-left: 1.5rem;
+                margin-bottom: 5rem;
             }
-
-            @include m.desktopXL {
-                margin-left: 0;
+    
+            p {
+                text-align: justify;
+                width: 60%;
+                margin: 0;
+                font-size: 1.5rem;
+                line-height: 1.5;
+    
+                @include m.desktop {
+                    width: 60%;
+                    margin-left: 1.5rem;
+                }
+    
+                @include m.desktopXL {
+                    margin-left: 0;
+                }
             }
         }
 
@@ -79,83 +88,20 @@
                 }
             }
         }
-    }
-
-    .informacion-faja {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .imagen-faja {
-            width: 30rem;
-            height: 40rem;
-            background-color: v.$blue;
-            border-radius: 2rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-
-            @include m.desktop {
-                width: 40rem;
-                height: 60rem;
-            }
-        }
-
-        .caracteristicas-faja {
-
-            h3 {
-                margin: 2rem 0 0 0;
-                font-size: 2rem;
-                font-style: v.$normal_font;
-                text-align: start;
-
-                @include m.desktop{
-                    margin: 2rem 0 0 5rem;
-                }
-            }
-
-            p {
-                margin: 2rem 0 0 0;
-                width: 100%;
-                line-height: 1;
-                font-size: 1.5rem;
-
-                @include m.desktop {
-                    margin: 2rem 40rem 0 0;
-                }
-
-                span {
-                    font-weight: v.$bold_font;
-                }
-            }
-        }
-    }
-
-    .eleccion-faja {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 4rem;
-
-        @include m.desktop {
-            margin-right: 3rem;
-            margin-top: 0;
-        }
-        
 
         .info-rapida {
-            font-size: 1.5rem;
+            font-size: 2rem;
             width: 100%;
             margin: 0;
             line-height: 1;
-            font-weight: v.$bold_font;
             padding: 0 1rem 0 1rem;
             text-align: center;
 
             @include m.desktop {
-                width: 25rem;
+                margin-top: 5rem;
+                width: 60%;
                 padding: 0;
-                text-align: left;
+                text-align: center;
             }
         }
 
@@ -165,7 +111,7 @@
             margin-top: 2rem;
 
             @include m.desktop{
-                margin-top: 0;
+                margin-top: 3rem;
             }
 
             p {
@@ -186,12 +132,6 @@
                 cursor: pointer;
             }
         }
-
-        .color.selected,
-        .talla.selected {
-            border: 2px solid v.$red; /* Puedes cambiar el color del borde al ser seleccionado */
-        }
-
 
         .precio-faja {
             display: flex;
@@ -214,15 +154,107 @@
             }
         }
 
-        .imagen-secundaria-faja {
-            margin: 2rem;
-            width: 35rem;
-            height: 39rem;
-            background-color: v.$blue;
-            border-radius: 4rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
+        .color.selected,
+        .talla.selected {
+            border: 2px solid v.$red; /* Puedes cambiar el color del borde al ser seleccionado */
+        }
+    }
+
+    .segunda_columna-faja {
+        display: flex;
+        flex-direction: column;
+
+        .imagenes-faja {
+            display: flex;
+            
+            .img-1,
+            .img-2,
+            .img-3 {
+                width: 30rem;
+                height: 50rem;
+                background-repeat: no-repeat;
+            }
+
+            .img-1,
+            .img-2 {
+                background-position: center bottom;
+            }
+
+            .img-1 {
+                background-size: 98% 90%;
+            }
+
+            .img-2 {
+                background-size: 80% 85%;
+            }
+
+            .img-3 {
+                background-position: left bottom;
+                background-size: 72% 75%;
+            }
+        }
+
+        .linea {
+            margin: 10rem 0 0 0;
+            width: 100%;
+            height: 1rem;
+            background-color: v.$bold_blue;
+    
+            @include m.semi_desktop {
+                margin: 0 0 0 0;
+            }
+        }
+
+        // .imagen-faja {
+        //     width: 30rem;
+        //     height: 40rem;
+        //     background-color: v.$blue;
+        //     border-radius: 2rem;
+        //     background-size: contain;
+        //     background-repeat: no-repeat;
+        //     background-position: center center;
+
+        //     @include m.desktop {
+        //         width: 40rem;
+        //         height: 60rem;
+        //     }
+        // }
+
+
+    }
+
+    .informacion-faja {
+        display: flex;
+        justify-content: center;
+
+        .caracteristicas-faja {
+
+            h3 {
+                margin: 2rem 0 0 0;
+                font-size: 2rem;
+                font-style: v.$normal_font;
+                text-align: start;
+
+                @include m.desktop{
+                    margin: 2rem 0 0 0;
+                }
+            }
+
+            p {
+                margin: 2rem 0 0 0;
+                width: 100%;
+                line-height: 1;
+                font-size: 1.5rem;
+
+                @include m.desktop {
+                    margin: 2rem 0 0 0;
+                    width: 30rem;
+                }
+
+                span {
+                    font-weight: v.$bold_font;
+                }
+            }
         }
 
         .beneficios-faja {
@@ -236,6 +268,10 @@
                 font-size: 2.5rem;
                 font-weight: v.$bold_font;
                 margin: 0;
+
+                @include m.desktop {
+                    margin: 2rem 0 0 0;
+                }
             }
 
             p {
