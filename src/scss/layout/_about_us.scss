@@ -26,14 +26,7 @@
         margin: 3rem 0 5rem 10rem;
     }
 
-    h2 {
-        margin: 0;
-        font-size: 4rem;
-        
-    }
-
     p {
-        font-size: 1.5rem;
         margin: 2rem 0 0 0;
     }
 }
@@ -73,14 +66,8 @@
         @include m.desktop {
 
         }
-
-        h2 {
-            margin: 0;
-            font-size: 4rem;
-        }
     
         p {
-            font-size: 1.5rem;
             margin: 2rem 0 0 0;
         }
     }
@@ -103,13 +90,7 @@
         margin: 5rem 0 5rem 25rem;
     }
 
-    h2 {
-        margin: 0;
-        font-size: 4rem;
-    }
-
     p {
-        font-size: 1.5rem;
         margin: 2rem 0 0 0;
     }
 }

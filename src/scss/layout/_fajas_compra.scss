@@ -41,13 +41,13 @@
             }
     
             p {
-                text-align: justify;
+                text-align: center;
                 width: 60%;
                 margin: 0;
-                font-size: 1.5rem;
                 line-height: 1.5;
     
                 @include m.desktop {
+                    text-align: justify;
                     width: 60%;
                     margin-left: 1.5rem;
                 }
@@ -92,13 +92,12 @@
         .info-rapida {
             font-size: 2rem;
             width: 100%;
-            margin: 0;
+            margin: 5rem 0 0 0;
             line-height: 1;
             padding: 0 1rem 0 1rem;
             text-align: center;
 
             @include m.desktop {
-                margin-top: 5rem;
                 width: 60%;
                 padding: 0;
                 text-align: center;
@@ -166,6 +165,18 @@
 
         .imagenes-faja {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include m.tablet {
+                align-items: flex-start;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            @include m.desktop {
+                justify-content: flex-start;
+            }
             
             .img-1,
             .img-2,
@@ -173,6 +184,16 @@
                 width: 30rem;
                 height: 50rem;
                 background-repeat: no-repeat;
+
+                @include m.tablet {
+                    width: 23rem;
+                    height: 40rem;
+                }
+
+                @include m.semi_desktop {
+                    width: 30rem;
+                    height: 50rem;
+                }
             }
 
             .img-1,
@@ -189,8 +210,12 @@
             }
 
             .img-3 {
-                background-position: left bottom;
+                background-position: center bottom;
                 background-size: 72% 75%;
+
+                @include m.desktop {
+                    background-position: left bottom;
+                }
             }
         }
 
@@ -204,28 +229,18 @@
                 margin: 0 0 0 0;
             }
         }
-
-        // .imagen-faja {
-        //     width: 30rem;
-        //     height: 40rem;
-        //     background-color: v.$blue;
-        //     border-radius: 2rem;
-        //     background-size: contain;
-        //     background-repeat: no-repeat;
-        //     background-position: center center;
-
-        //     @include m.desktop {
-        //         width: 40rem;
-        //         height: 60rem;
-        //     }
-        // }
-
-
     }
 
     .informacion-faja {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tablet {
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: center;
+        }
 
         .caracteristicas-faja {
 
@@ -233,7 +248,12 @@
                 margin: 2rem 0 0 0;
                 font-size: 2rem;
                 font-style: v.$normal_font;
-                text-align: start;
+                text-align: center;
+
+                @include m.tablet {
+                    text-align: start;
+                    margin: 2rem 0 0 5rem;
+                }
 
                 @include m.desktop{
                     margin: 2rem 0 0 0;
@@ -241,10 +261,15 @@
             }
 
             p {
+                text-align: center;
                 margin: 2rem 0 0 0;
                 width: 100%;
                 line-height: 1;
-                font-size: 1.5rem;
+
+                @include m.tablet {
+                    text-align: start;
+                    margin: 2rem 0 0 5rem;
+                }
 
                 @include m.desktop {
                     margin: 2rem 0 0 0;
@@ -267,15 +292,15 @@
                 font-style: v.$normal_font;
                 font-size: 2.5rem;
                 font-weight: v.$bold_font;
-                margin: 0;
+                margin-top: 5rem;
 
-                @include m.desktop {
+                @include m.tablet {
                     margin: 2rem 0 0 0;
                 }
             }
 
             p {
-                font-size: 1.5rem;
+                text-align: center;
                 padding: 0 1rem 0 1rem;
 
                 @include m.tablet {
@@ -283,6 +308,7 @@
                 }
 
                 @include m.desktop {
+                    text-align: start;
                     padding: 0;
                 }
             }

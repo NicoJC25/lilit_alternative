@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
 
+    h2 {
+        text-transform: uppercase;
+    }
+
     @include m.desktop {
         @include m.grid(2);
     }
@@ -35,14 +39,8 @@
                 margin: 1rem 0 0 10rem;
             }
 
-            h2 {
-                margin: 0;
-                font-size: 4rem;
-            }
-
             p {
                 margin: 1rem 0 0 0;
-                font-size: 1.5rem;
             }
         }
 
@@ -64,7 +62,6 @@
 
             h2 {
                 text-align: center;
-                font-size: 4rem;
             }
 
             p {
@@ -89,12 +86,10 @@
 
             h2 {
                 text-align: center;
-                font-size: 4rem;
             }
 
             p {
                 padding: 0 1rem 0 1rem;
-                font-size: 1.5rem;
             }
         }
 
@@ -311,12 +306,10 @@
 
             h2 {
                 text-align: center;
-                font-size: 4rem;
             }
 
             p {
                 padding: 0 1rem 0 1rem;
-                font-size: 1.5rem;
             }
         }
 
@@ -336,12 +329,10 @@
 
             h2 {
                 text-align: center;
-                font-size: 4rem;
             }
 
             p {
                 padding: 0 1rem 0 1rem;
-                font-size: 1.5rem;
             }
         }
 
