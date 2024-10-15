@@ -88,9 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const fajaSections = document.querySelectorAll('.segunda_columna-faja');
     
     fajaSections.forEach(fajaSection => {
-        // Obtener los elementos de color y talla dentro de la primera_columna-faja (hermana de segunda_columna-faja)
+        // Obtener los elementos de color dentro de la primera_columna-faja (hermana de segunda_columna-faja)
         const colorElements = fajaSection.previousElementSibling.querySelectorAll('.color');
-        const tallaElements = fajaSection.previousElementSibling.querySelectorAll('.talla');
         
         // Obtener las imágenes de la subcategoría dentro de la sección
         const fajaImageBox = fajaSection.querySelector('.img-1');
@@ -98,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const fajaImageTerciariaBox = fajaSection.querySelector('.img-3');
 
         let selectedColor = 'negro'; // Color por defecto
-        let selectedTalla = 'S'; // Talla por defecto
 
         const currentCategory = window.location.pathname.split('/').pop().split('.')[0]; // Estilo específico
 
@@ -106,10 +104,10 @@ document.addEventListener('DOMContentLoaded', function () {
         function updateImage() {
             const subcategoryClass = fajaSection.querySelector('.imagenes-faja').classList[1];
 
-            // Construir las URLs de las imágenes para cada color y talla seleccionados
-            const imageUrlPrincipal = `../../../src/img/fajas/${currentCategory}/${subcategoryClass}/faja_${selectedColor}_${selectedTalla}.png`;
-            const imageUrlSecundaria = `../../../src/img/fajas/${currentCategory}/${subcategoryClass}/faja_secundaria_${selectedColor}_${selectedTalla}.png`;
-            const imageUrlTerciaria = `../../../src/img/fajas/${currentCategory}/${subcategoryClass}/faja_terciaria_${selectedColor}_${selectedTalla}.png`;
+            // Construir las URLs de las imágenes para cada color seleccionado
+            const imageUrlPrincipal = `../../../src/img/fajas/${currentCategory}/${subcategoryClass}/faja_${selectedColor}.png`;
+            const imageUrlSecundaria = `../../../src/img/fajas/${currentCategory}/${subcategoryClass}/faja_secundaria_${selectedColor}.png`;
+            const imageUrlTerciaria = `../../../src/img/fajas/${currentCategory}/${subcategoryClass}/faja_terciaria_${selectedColor}.png`;
 
             // Actualizar las imágenes de la subcategoría específica
             fajaImageBox.style.backgroundImage = `url(${imageUrlPrincipal})`;
@@ -123,16 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 colorElements.forEach(el => el.classList.remove('selected'));
                 this.classList.add('selected');
                 selectedColor = this.getAttribute('data-color');
-                updateImage(); // Actualizar las imágenes solo en esta sección de faja
-            });
-        });
-
-        // Detectar selección de talla y actualizar las imágenes en la sección correspondiente
-        tallaElements.forEach(talla => {
-            talla.addEventListener('click', function () {
-                tallaElements.forEach(el => el.classList.remove('selected'));
-                this.classList.add('selected');
-                selectedTalla = this.getAttribute('data-talla');
                 updateImage(); // Actualizar las imágenes solo en esta sección de faja
             });
         });

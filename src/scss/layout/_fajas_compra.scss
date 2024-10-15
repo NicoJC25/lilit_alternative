@@ -128,7 +128,6 @@
                 border: .1rem solid v.$blue;
                 padding: 1rem 1rem 1rem 1rem;
                 text-align: center;
-                cursor: pointer;
             }
         }
 
@@ -153,8 +152,7 @@
             }
         }
 
-        .color.selected,
-        .talla.selected {
+        .color.selected {
             border: 2px solid v.$red; /* Puedes cambiar el color del borde al ser seleccionado */
         }
     }
@@ -216,6 +214,18 @@
                 @include m.desktop {
                     background-position: left bottom;
                 }
+            }
+
+            .menor_tamano_1 {
+                background-size: 88% 100%;
+            }
+
+            .menor_tamano_2 {
+                background-size: 85% 90%;
+            }
+
+            .menor_tamano_3 {
+                background-size: 62% 75%;
             }
         }
 
