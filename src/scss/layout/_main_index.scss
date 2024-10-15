@@ -19,13 +19,19 @@ h3{
 /* Seccion del carrusel */
 
 .carrusel_imagenes {
-    display: flex;
+    width: 100%;
+    overflow: hidden; // Asegura que las imágenes fuera del slider no sean visibles
+    position: relative;
     align-items: center;
     justify-content: center;
     height: 50rem;
     background-color: rgba($color: v.$blue, $alpha: .5);
 
-    h4 {
+    .carrusel {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s ease-in-out; // Animación suave al cambiar de imagen
         font-size: 3rem;
         margin: 0;
         text-align: center;
@@ -33,6 +39,18 @@ h3{
         @include m.desktop{
             margin-right: 30rem;
             text-align: start;
+        }
+
+        .slider-section {
+            width: 100%; // Cada imagen ocupa el 100% del contenedor visible
+            flex: none; // Evitar que se ajuste automáticamente el tamaño
+            height: 100%;
+        }
+
+        .slider-section img {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 
