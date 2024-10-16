@@ -108,6 +108,7 @@
             display: flex;
             align-items: center;
             margin-top: 2rem;
+            margin-left: 1rem;
 
             @include m.desktop{
                 margin-top: 3rem;
@@ -179,9 +180,22 @@
             .img-1,
             .img-2,
             .img-3 {
+                transition: transform .3s ease-in-out;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 30rem;
                 height: 50rem;
                 background-repeat: no-repeat;
+                
+                p {
+                    color: v.$bold_blue;
+                    font-size: 2rem;
+                    font-weight: v.$bold_font;
+                }
 
                 @include m.tablet {
                     width: 23rem;
@@ -226,6 +240,10 @@
 
             .menor_tamano_3 {
                 background-size: 62% 75%;
+            }
+
+            .menor_anchura {
+                background-size: 60% 90%;
             }
         }
 

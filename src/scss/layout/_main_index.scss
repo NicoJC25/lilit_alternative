@@ -26,6 +26,7 @@ h3{
     justify-content: center;
     height: 50rem;
     background-color: rgba($color: v.$blue, $alpha: .5);
+    z-index: -1;
 
     .carrusel {
         width: 100%;
