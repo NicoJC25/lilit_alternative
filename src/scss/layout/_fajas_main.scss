@@ -1,6 +1,8 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+/* Esqueleto de la pagina */
+
 .main-fajas {
     display: flex;
     flex-direction: column;
@@ -9,6 +11,8 @@
     @include m.tablet {
         display: block;
     }
+
+    /* Apartado redes sociales */
 
     .redes_sociales {
         position: fixed;
@@ -30,6 +34,8 @@
         }
     }
 
+    /* Caja de la descripcion e imagen grande */
+
     .fajas-d-i {
         display: flex;
         flex-direction: column;
@@ -40,6 +46,8 @@
             flex-direction: row;
         }
         
+        /* Descripcion */
+
         .fajas-d {
             display: flex;
             flex-direction: column;
@@ -79,6 +87,8 @@
             }
         }
 
+        /* Imagen grande */
+
         .fajas-i {
             transition: transform .3s ease-in-out;
             &:hover {
@@ -112,6 +122,8 @@
         }
     }
 
+    /* Caja de las demas imagenes en la parte inferior */
+
     .fajas-many_images {
         display: flex;
         flex-direction: column;
@@ -134,6 +146,8 @@
             padding: 0;
             width: auto;
         }
+
+        /* Ajustes a las imagenes como tal */
 
         .img-f-1,
         .img-f-2,
@@ -164,6 +178,8 @@
                 height: 50rem;
             }
         }
+
+        /* Ajustes mas individuales a las imagenes */
 
         .img-f-3,
         .img-f-5 {

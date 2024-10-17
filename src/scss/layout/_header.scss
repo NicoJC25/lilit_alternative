@@ -1,7 +1,7 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-/* Header for page */
+/* Header de las paginas */
 
 .header {
     background-color: v.$cyan;
@@ -24,6 +24,8 @@
             height: 10rem;
         }
     }
+
+    /* Navegador */
 
     .nav {
         display: flex;
@@ -83,6 +85,8 @@
                 }
             }
         }
+
+        /* Estilos para el dropdown */
 
         .dropdown {
             position: relative;

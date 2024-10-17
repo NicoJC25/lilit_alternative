@@ -14,6 +14,8 @@ html {
     box-sizing: inherit;
 }
 
+/* Configuracion de todas las fuentes de letra usadas */
+
 @font-face {
     font-family: 'Hijrnotes'; 
     src: url('../../../src/fonts/Hijrnotes.ttf') format('truetype');
@@ -66,6 +68,9 @@ html {
 /* body */
 
 body {
+
+    /* Posicionamiento redes sociales */
+
     .redes_sociales {
         display: flex;
         flex-direction: column;
@@ -114,6 +119,8 @@ body {
 
     }
 
+    /* Los puntos que se encuentran en el fondo */
+
     .puntos_1_au {
         display: none;
 
@@ -128,6 +135,8 @@ body {
             z-index : -1;
         }
     }
+
+    /* Los puntos que se encuentran en el fondo */
     
     .puntos_2_au {
         
@@ -146,9 +155,13 @@ body {
         }
     }
 
+    /* Configuracion para algunos puntos de fondo que se ven mal */
+
     .adicional_bajo {
         bottom: -4%;
     }
+
+    /* Otros puntos solo para "faja" */
 
     .puntos_2_faja {
         
@@ -167,6 +180,8 @@ body {
     }
 }
 
+/* Body de la pagina de index */
+
 .body-index {
     font-family: v.$main_font;
     font-optical-sizing: auto;
@@ -180,7 +195,7 @@ body {
     overflow-x: hidden;
 }
 
-  
+/* Body de casi toda las pestañas de la pagina */  
 
 .body-mostly-page{
     font-family: v.$main_font;
@@ -195,6 +210,8 @@ body {
     overflow-x: hidden;
 }
 
+/* Body para las pestañas de "post-operatorio" */
+
 .body-post-o {
     font-family: v.$main_font;
     font-optical-sizing: auto;
@@ -208,7 +225,7 @@ body {
     position: relative;
 }
 
-/* others */
+/* Configuraciones por defecto para algunos tipos de etiquetas */
 
 p {
     color: v.$black;

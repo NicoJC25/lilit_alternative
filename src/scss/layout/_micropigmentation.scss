@@ -1,6 +1,8 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+/* Esqueleto de la pagina */
+
 .main-micropigmentation {
     display: flex;
     flex-direction: column;
