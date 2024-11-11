@@ -19,7 +19,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
 
         /* Configuracion texto "Post Operatorio" (Solo para "lipopapada") */
 
@@ -72,28 +71,30 @@
             }
         }
 
-        .procedimiento {
-            width: 100%;
-            margin: 5rem 1rem 0 1rem;
-            text-align: justify;
+        // Comentado debido a que no pasaron el procedimiento
 
-            @include m.tablet {
-                width: 70%;
-            }
+        // .procedimiento {
+        //     width: 100%;
+        //     margin: 5rem 1rem 0 1rem;
+        //     text-align: justify;
 
-            @include m.desktop {
-                width: 80%;
-                margin: 5rem 0 0 30rem;
-            }
+        //     @include m.tablet {
+        //         width: 70%;
+        //     }
 
-            h2 {
-                text-align: center;
-            }
+        //     @include m.desktop {
+        //         width: 80%;
+        //         margin: 5rem 0 0 30rem;
+        //     }
 
-            p {
-                padding: 0 1rem 0 1rem;
-            }
-        }
+        //     h2 {
+        //         text-align: center;
+        //     }
+
+        //     p {
+        //         padding: 0 1rem 0 1rem;
+        //     }
+        // }
 
 
         .linea {
@@ -343,28 +344,30 @@
             }
         }
 
-        .procedimiento {
-            width: 100%;
-            margin: 5rem 1rem 0 1rem;
-            text-align: justify;
+        // Comentado debido a que no pasaron el procedimiento
 
-            @include m.tablet {
-                width: 70%;
-            }
+        // .procedimiento {
+        //     width: 100%;
+        //     margin: 5rem 1rem 0 1rem;
+        //     text-align: justify;
 
-            @include m.desktop {
-                width: 80%;
-                margin: 5rem 30rem 0 0;
-            }
+        //     @include m.tablet {
+        //         width: 70%;
+        //     }
 
-            h2 {
-                text-align: center;
-            }
+        //     @include m.desktop {
+        //         width: 80%;
+        //         margin: 5rem 30rem 0 0;
+        //     }
 
-            p {
-                padding: 0 1rem 0 1rem;
-            }
-        }
+        //     h2 {
+        //         text-align: center;
+        //     }
+
+        //     p {
+        //         padding: 0 1rem 0 1rem;
+        //     }
+        // }
 
 
         .linea {
