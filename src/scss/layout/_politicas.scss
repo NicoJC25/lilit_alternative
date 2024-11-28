@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* Configuración del main */
+
+.main-politicas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+
+    .envio_transporte {
+        margin-top: 5rem;
+        width: 50%;
+    }
+
+    .comerciales {
+        margin-top: 2rem;
+        width: 50%;
+    }
+
+    .garantia {
+        margin-top: 2rem;
+        width: 50%;
+    }
+
+    .cambios {
+        margin-top: 2rem;
+        width: 50%;
+    }
+
+    span {
+        font-style: italic;
+        font-weight: bold;
+    }
+}
